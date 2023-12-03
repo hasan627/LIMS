@@ -17,8 +17,14 @@ export class OrganizationDesignationPage{
     AddBtn(){
         return cy.xpath("//button[@type='submit']")
     }
+    EditBtn(){
+        return cy.get(':nth-child(2) > .css-jky7cf')
+    }
     ClearAllBtn(){
         return cy.get('button').click()
+    }
+    UpdateBtn(){
+        cy.get('.submitBtnBox > .MuiButton-outlinedPrimary')
     }
 
 
