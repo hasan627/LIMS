@@ -7,10 +7,31 @@
 // commands please read more here:
 // https://on.cypress.io/custom-commands
 // ***********************************************
-//
+
+import './commands'
+Cypress.on('uncaught:exception', (err, runnable) => {
+  // returning false here prevents Cypress from failing the test
+  return false
+})
+
 //
 // -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
+// import { LoginPage } from "../pages/loginpage";
+// const loginpage = new LoginPage()
+Cypress.Commands.add('login', () => { 
+    cy.viewport(1400, 1200)
+    cy.visit('')
+    cy.get('.header-right > .MuiList-root > :nth-child(6) > a').click()
+    cy.origin('http://192.168.30.61:8090/login', () => {
+      cy.get("[name='username']").type('admin')
+      cy.get("[name='password']").type('admin')
+      cy.get('button').click()
+
+    })
+
+    cy.url().should('include', '/admin')  
+})
+
 //
 //
 // -- This is a child command --

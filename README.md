@@ -4,7 +4,7 @@ Labor Information Management System
 Step:
 -----------------------------------
 1. npm init –y (to initial node in the project)
-2. npm install cypress --save-dev(to install cypress in the project)
+2. npm install cypress --save-dev (to install cypress in the project)
 3. npx cypress open (to open cypress web view)
 4. npx cypress -v (to check version)
 5. npm install typescript (to install typescript)
