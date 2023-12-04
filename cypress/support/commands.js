@@ -19,7 +19,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
 // import { LoginPage } from "../pages/loginpage";
 // const loginpage = new LoginPage()
 Cypress.Commands.add('login', () => { 
-    cy.viewport(1400, 1200)
+    cy.viewport(1800, 1200)
     cy.visit('')
     cy.get('.header-right > .MuiList-root > :nth-child(6) > a').click()
     cy.origin('http://192.168.30.61:8090/login', () => {
