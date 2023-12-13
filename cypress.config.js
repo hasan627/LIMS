@@ -6,7 +6,7 @@ module.exports = defineConfig({
   e2e: {
     watchForFileChanges: false,
     defaultCommandTimeout: 5000,
-    baseUrl: "http://192.168.30.62",
+    baseUrl: "http://192.168.30.71",
     experimentalOriginDependencies: true,
     //baseUrl: "http://192.168.30.61:8090",
     setupNodeEvents(on, config) {

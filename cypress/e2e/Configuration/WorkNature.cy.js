@@ -3,10 +3,14 @@ import { WorkNaturePage } from "../../pages/Configuration/Work Nature";
 const worknaturepage = new WorkNaturePage()
 
 describe('Work Nature CRUD', () => {
-    
+
+    beforeEach(function(){
+        cy.login('')
+
+    })
+
     //Create
     it('Work Nature Create', () => {
-        cy.login('')
         worknaturepage.ConfigurationMenu().click()
         worknaturepage.WorkNatureMenu().click()
         worknaturepage.WorkNatureNameEN().type('Seasonal')
@@ -18,7 +22,7 @@ describe('Work Nature CRUD', () => {
 
     //ClearAll
     it('Verify Clear All button', () => {
-        cy.login('')
+        //cy.login('')
         worknaturepage.ConfigurationMenu().click()
         worknaturepage.WorkNatureMenu().click()
         worknaturepage.WorkNatureNameEN().type('Seasonal')
@@ -29,8 +33,8 @@ describe('Work Nature CRUD', () => {
     })
 
     //Update
-    it.only('Update Testing', () => {
-        cy.login('')
+    it('Update Testing', () => {
+        //cy.login('')
         worknaturepage.ConfigurationMenu().click()
         worknaturepage.WorkNatureMenu().click()
         worknaturepage.EditBtn().click()

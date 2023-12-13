@@ -22,7 +22,7 @@ Cypress.Commands.add('login', () => {
     cy.viewport(1800, 1200)
     cy.visit('')
     cy.get('.header-right > .MuiList-root > :nth-child(6) > a').click()
-    cy.origin('http://192.168.30.61:8090/login', () => {
+    cy.origin('http://192.168.30.72:58090/login', () => {
       cy.get("[name='username']").type('admin')
       cy.get("[name='password']").type('admin')
       cy.get('button').click()
