@@ -18,6 +18,11 @@ npm install mochawesome-report-generator
 npm install mochawesome-merge --save-dev
 (this line add to “support-> e2e.js” file: import 'cypress-mochawesome-reporter/register';)
 
+For Data Driven Testing
+------------------------------------
+npm install neat-csv@v5 –save–dev
+import net-csv package: const csv = require ('neat-csv');
+
 
 For Single run:how to run single test case and generate a mochawesome reports
 ---------------------------------------------------------------------------------
